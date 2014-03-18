@@ -15,7 +15,6 @@
 	int index;
 	CGImageSourceRef source;
 	size_t count;
-	CGSize size;
 }
 
 + (VVeboImage *)gifWithData:(NSData *)data{
@@ -28,14 +27,15 @@
 	data = data1;
 	source = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
 	count = CGImageSourceGetCount(source);
-	CGImageRef image = CGImageSourceCreateImageAtIndex(source, index, NULL);
-	self = [super initWithCGImage:image scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
-	CGImageRelease(image);
+	if (count<=1) {
+		self = [super initWithData:data1];
+		return self;
+	} else {
+		CGImageRef image = CGImageSourceCreateImageAtIndex(source, index, NULL);
+		self = [super initWithCGImage:image scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
+		CGImageRelease(image);
+	}
 	if (self) {
-		if (count<=1) {
-			CFRelease(source);
-			data = nil;
-		}
 		NSLog(@"init with gif count %zu %@", count, self);
 	}
 	return self;

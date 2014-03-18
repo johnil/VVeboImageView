@@ -12,12 +12,14 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+	UIScrollView *scrollView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+	scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
 	scrollView.contentSize = CGSizeMake(320*2, 0);
 	scrollView.pagingEnabled = YES;
 	scrollView.clipsToBounds = NO;
@@ -28,6 +30,7 @@
 					[[NSBundle mainBundle] pathForResource:@"1.gif" ofType:nil]];
 	for (int i=0; i<10; i++) {
 		VVeboImageView *gif = [[VVeboImageView alloc] initWithImage:[VVeboImage gifWithData:data]];
+		gif.tag = 1;
 		gif.frame = CGRectMake(i%2*130, i/2*100+20, 122, 89);
 		[scrollView addSubview:gif];
 	}
@@ -35,6 +38,7 @@
 	NSData *bigData = [NSData dataWithContentsOfFile:
 					   [[NSBundle mainBundle] pathForResource:@"2.gif" ofType:nil]];
 	VVeboImageView *gif = [[VVeboImageView alloc] initWithImage:[VVeboImage gifWithData:bigData]];
+	gif.tag = 1;
 	CGRect frame = gif.frame;
 	frame.origin.x = 320;
 	gif.frame = frame;
@@ -50,8 +54,16 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-	for (UIView *temp in self.view.subviews) {
-		[temp removeFromSuperview];
+	for (VVeboImageView *temp in scrollView.subviews) {
+		if ([temp isKindOfClass:[VVeboImageView class]]) {
+			if (temp.tag==1) {
+				[temp pauseGif];
+				temp.tag = -1;
+			} else {
+				[temp playGif];
+				temp.tag = 1;
+			}
+		}
 	}
 }
 

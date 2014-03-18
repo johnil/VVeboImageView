@@ -11,4 +11,10 @@
 
 @interface VVeboImageView : UIImageView
 
+@property (nonatomic) float frameDuration;
+@property (nonatomic) float currentDuration;
+- (void)playNext;
+- (void)playGif;
+- (void)pauseGif;
+
 @end

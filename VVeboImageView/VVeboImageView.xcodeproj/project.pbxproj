@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4A4A68F18D8047D000D06A2 /* VVeboImageTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A4A68E18D8047D000D06A2 /* VVeboImageTicker.m */; };
 		C4BDBD8E18C9C5DC0072AD6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD8D18C9C5DC0072AD6B /* Foundation.framework */; };
 		C4BDBD9018C9C5DC0072AD6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD8F18C9C5DC0072AD6B /* CoreGraphics.framework */; };
 		C4BDBD9218C9C5DC0072AD6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD9118C9C5DC0072AD6B /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4A4A68D18D8047D000D06A2 /* VVeboImageTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboImageTicker.h; sourceTree = "<group>"; };
+		C4A4A68E18D8047D000D06A2 /* VVeboImageTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboImageTicker.m; sourceTree = "<group>"; };
 		C4BDBD8A18C9C5DC0072AD6B /* VVeboImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVeboImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BDBD8D18C9C5DC0072AD6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BDBD8F18C9C5DC0072AD6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 		C4BDBD9318C9C5DC0072AD6B /* VVeboImageView */ = {
 			isa = PBXGroup;
 			children = (
+				C4A4A68D18D8047D000D06A2 /* VVeboImageTicker.h */,
+				C4A4A68E18D8047D000D06A2 /* VVeboImageTicker.m */,
 				C4BDBDC218C9C6080072AD6B /* VVeboImageView.h */,
 				C4BDBDC318C9C6080072AD6B /* VVeboImageView.m */,
 				C4BDBDC418C9C6080072AD6B /* VVeboImage.h */,
@@ -271,6 +276,7 @@
 				C4BDBD9E18C9C5DC0072AD6B /* AppDelegate.m in Sources */,
 				C4BDBD9A18C9C5DC0072AD6B /* main.m in Sources */,
 				C4BDBDC618C9C6080072AD6B /* VVeboImageView.m in Sources */,
+				C4A4A68F18D8047D000D06A2 /* VVeboImageTicker.m in Sources */,
 				C4BDBDC718C9C6080072AD6B /* VVeboImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +486,7 @@
 				C4BDBDBE18C9C5DD0072AD6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4BDBDBF18C9C5DD0072AD6B /* Build configuration list for PBXNativeTarget "VVeboImageViewTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +495,7 @@
 				C4BDBDC118C9C5DD0072AD6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,29 +7,23 @@
 //
 
 #import "VVeboImageView.h"
-
+#import "VVeboImageTicker.h"
 @implementation VVeboImageView {
-	NSTimer *timer;
 	VVeboImage *gifImage;
 }
 
 - (void)setImage:(UIImage *)image{
 	if (image==nil) {
-		if (timer) {
-			[timer invalidate];
-			timer = nil;
-		}
 		[super setImage:nil];
 		return;
 	}
 	if ([image isKindOfClass:[VVeboImage class]]) {
 		gifImage = (VVeboImage *)image;
 		if ([(VVeboImage *)image count]>1) {
-			float duration = [gifImage frameDuration];
+			_frameDuration = [gifImage frameDuration];
 			[(VVeboImage *)image resumeIndex];
 			[super setImage:[(VVeboImage *)image nextImage]];
-			timer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(tick) userInfo:nil repeats:NO];
-			[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+			[[VVeboImageTicker sharedInstance] tickView:self];
 		} else {
 			[super setImage:image];
 		}
@@ -38,20 +32,26 @@
 	}
 }
 
-- (void)tick{
-	[timer invalidate];
-	timer = nil;
-	float duration = [gifImage frameDuration];
+- (void)playNext{
+	if (_currentDuration<_frameDuration) {
+		_currentDuration+=tickStep;
+		return;
+	}
+	_frameDuration = [gifImage frameDuration];
 	[super setImage:[gifImage nextImage]];
-	timer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(tick) userInfo:nil repeats:NO];
-	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+	_currentDuration = 0;
+}
+
+- (void)playGif{
+	[[VVeboImageTicker sharedInstance] tickView:self];
+}
+
+- (void)pauseGif{
+	[[VVeboImageTicker sharedInstance] unTickView:self];
 }
 
 - (void)removeFromSuperview{
-	if (timer) {
-		[timer invalidate];
-		timer = nil;
-	}
+	[[VVeboImageTicker sharedInstance] unTickView:self];
 	self.image = nil;
 	[super removeFromSuperview];
 }
