@@ -10,13 +10,8 @@
 #import "VVeboImageView.h"
 
 @implementation VVeboImageTicker {
-	NSTimer *timer;
+	CADisplayLink *timer;
 	NSMutableArray *gifsView;
-}
-
-+ (void)load
-{
-    [self performSelectorOnMainThread:@selector(sharedInstance) withObject:nil waitUntilDone:NO];
 }
 
 + (VVeboImageTicker *)sharedInstance
@@ -33,14 +28,20 @@
 	self = [super init];
 	if (self) {
 		gifsView = [[NSMutableArray alloc] init];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopTimer) name:UIApplicationDidEnterBackgroundNotification object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startTimer) name:UIApplicationDidBecomeActiveNotification object:nil];
 	}
 	return self;
 }
 
 - (void)startTimer{
+	if (gifsView.count<=0) {
+		return;
+	}
 	[self stopTimer];
-	timer = [NSTimer scheduledTimerWithTimeInterval:tickStep target:self selector:@selector(tick) userInfo:nil repeats:YES];
-	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+	timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick)];
+	timer.frameInterval = tickStep;
+	[timer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopTimer{

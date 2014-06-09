@@ -53,20 +53,6 @@
 	[gif addSubview:description2];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-	for (VVeboImageView *temp in scrollView.subviews) {
-		if ([temp isKindOfClass:[VVeboImageView class]]) {
-			if (temp.tag==1) {
-				[temp pauseGif];
-				temp.tag = -1;
-			} else {
-				[temp playGif];
-				temp.tag = 1;
-			}
-		}
-	}
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
