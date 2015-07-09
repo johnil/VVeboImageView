@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4A4A68F18D8047D000D06A2 /* VVeboImageTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A4A68E18D8047D000D06A2 /* VVeboImageTicker.m */; };
+		988110A280351ACFE2CB4214 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 130853B032CE68D86C786E8D /* libPods.a */; };
+		C423A3F01B4E80B700664149 /* UIImage+VVebo.m in Sources */ = {isa = PBXBuildFile; fileRef = C423A3EB1B4E80B700664149 /* UIImage+VVebo.m */; };
+		C423A3F11B4E80B700664149 /* UIImageView+VVebo.m in Sources */ = {isa = PBXBuildFile; fileRef = C423A3ED1B4E80B700664149 /* UIImageView+VVebo.m */; };
+		C423A3F21B4E80B700664149 /* VVeboImageTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C423A3EF1B4E80B700664149 /* VVeboImageTicker.m */; };
 		C4BDBD8E18C9C5DC0072AD6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD8D18C9C5DC0072AD6B /* Foundation.framework */; };
 		C4BDBD9018C9C5DC0072AD6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD8F18C9C5DC0072AD6B /* CoreGraphics.framework */; };
 		C4BDBD9218C9C5DC0072AD6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD9118C9C5DC0072AD6B /* UIKit.framework */; };
@@ -22,10 +25,6 @@
 		C4BDBDAF18C9C5DD0072AD6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BDBD9118C9C5DC0072AD6B /* UIKit.framework */; };
 		C4BDBDB718C9C5DD0072AD6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4BDBDB518C9C5DD0072AD6B /* InfoPlist.strings */; };
 		C4BDBDB918C9C5DD0072AD6B /* VVeboImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BDBDB818C9C5DD0072AD6B /* VVeboImageViewTests.m */; };
-		C4BDBDC618C9C6080072AD6B /* VVeboImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BDBDC318C9C6080072AD6B /* VVeboImageView.m */; };
-		C4BDBDC718C9C6080072AD6B /* VVeboImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BDBDC518C9C6080072AD6B /* VVeboImage.m */; };
-		C4BDBDC918C9C87B0072AD6B /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4BDBDC818C9C87B0072AD6B /* 1.gif */; };
-		C4BDBDCB18C9CA000072AD6B /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4BDBDCA18C9CA000072AD6B /* 2.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C4A4A68D18D8047D000D06A2 /* VVeboImageTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboImageTicker.h; sourceTree = "<group>"; };
-		C4A4A68E18D8047D000D06A2 /* VVeboImageTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboImageTicker.m; sourceTree = "<group>"; };
+		130853B032CE68D86C786E8D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		173CB14C85F68090738ECFE2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C423A3EA1B4E80B700664149 /* UIImage+VVebo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VVebo.h"; sourceTree = "<group>"; };
+		C423A3EB1B4E80B700664149 /* UIImage+VVebo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VVebo.m"; sourceTree = "<group>"; };
+		C423A3EC1B4E80B700664149 /* UIImageView+VVebo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+VVebo.h"; sourceTree = "<group>"; };
+		C423A3ED1B4E80B700664149 /* UIImageView+VVebo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+VVebo.m"; sourceTree = "<group>"; };
+		C423A3EE1B4E80B700664149 /* VVeboImageTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboImageTicker.h; sourceTree = "<group>"; };
+		C423A3EF1B4E80B700664149 /* VVeboImageTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboImageTicker.m; sourceTree = "<group>"; };
 		C4BDBD8A18C9C5DC0072AD6B /* VVeboImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVeboImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BDBD8D18C9C5DC0072AD6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4BDBD8F18C9C5DC0072AD6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,12 +65,7 @@
 		C4BDBDB418C9C5DD0072AD6B /* VVeboImageViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VVeboImageViewTests-Info.plist"; sourceTree = "<group>"; };
 		C4BDBDB618C9C5DD0072AD6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4BDBDB818C9C5DD0072AD6B /* VVeboImageViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVeboImageViewTests.m; sourceTree = "<group>"; };
-		C4BDBDC218C9C6080072AD6B /* VVeboImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboImageView.h; sourceTree = "<group>"; };
-		C4BDBDC318C9C6080072AD6B /* VVeboImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboImageView.m; sourceTree = "<group>"; };
-		C4BDBDC418C9C6080072AD6B /* VVeboImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboImage.h; sourceTree = "<group>"; };
-		C4BDBDC518C9C6080072AD6B /* VVeboImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboImage.m; sourceTree = "<group>"; };
-		C4BDBDC818C9C87B0072AD6B /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
-		C4BDBDCA18C9CA000072AD6B /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		C97CC8B36BF8FC41A9F546B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +76,7 @@
 				C4BDBD9018C9C5DC0072AD6B /* CoreGraphics.framework in Frameworks */,
 				C4BDBD9218C9C5DC0072AD6B /* UIKit.framework in Frameworks */,
 				C4BDBD8E18C9C5DC0072AD6B /* Foundation.framework in Frameworks */,
+				988110A280351ACFE2CB4214 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10A3AA8CC90B905662A5721C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C97CC8B36BF8FC41A9F546B4 /* Pods.debug.xcconfig */,
+				173CB14C85F68090738ECFE2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C4BDBD8118C9C5DC0072AD6B = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 				C4BDBDB218C9C5DD0072AD6B /* VVeboImageViewTests */,
 				C4BDBD8C18C9C5DC0072AD6B /* Frameworks */,
 				C4BDBD8B18C9C5DC0072AD6B /* Products */,
+				10A3AA8CC90B905662A5721C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +129,7 @@
 				C4BDBD8F18C9C5DC0072AD6B /* CoreGraphics.framework */,
 				C4BDBD9118C9C5DC0072AD6B /* UIKit.framework */,
 				C4BDBDAC18C9C5DD0072AD6B /* XCTest.framework */,
+				130853B032CE68D86C786E8D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,12 +137,12 @@
 		C4BDBD9318C9C5DC0072AD6B /* VVeboImageView */ = {
 			isa = PBXGroup;
 			children = (
-				C4A4A68D18D8047D000D06A2 /* VVeboImageTicker.h */,
-				C4A4A68E18D8047D000D06A2 /* VVeboImageTicker.m */,
-				C4BDBDC218C9C6080072AD6B /* VVeboImageView.h */,
-				C4BDBDC318C9C6080072AD6B /* VVeboImageView.m */,
-				C4BDBDC418C9C6080072AD6B /* VVeboImage.h */,
-				C4BDBDC518C9C6080072AD6B /* VVeboImage.m */,
+				C423A3EA1B4E80B700664149 /* UIImage+VVebo.h */,
+				C423A3EB1B4E80B700664149 /* UIImage+VVebo.m */,
+				C423A3EC1B4E80B700664149 /* UIImageView+VVebo.h */,
+				C423A3ED1B4E80B700664149 /* UIImageView+VVebo.m */,
+				C423A3EE1B4E80B700664149 /* VVeboImageTicker.h */,
+				C423A3EF1B4E80B700664149 /* VVeboImageTicker.m */,
 				C4BDBD9C18C9C5DC0072AD6B /* AppDelegate.h */,
 				C4BDBD9D18C9C5DC0072AD6B /* AppDelegate.m */,
 				C4BDBD9F18C9C5DD0072AD6B /* Main.storyboard */,
@@ -145,8 +157,6 @@
 		C4BDBD9418C9C5DC0072AD6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4BDBDC818C9C87B0072AD6B /* 1.gif */,
-				C4BDBDCA18C9CA000072AD6B /* 2.gif */,
 				C4BDBD9518C9C5DC0072AD6B /* VVeboImageView-Info.plist */,
 				C4BDBD9618C9C5DC0072AD6B /* InfoPlist.strings */,
 				C4BDBD9918C9C5DC0072AD6B /* main.m */,
@@ -180,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4BDBDBC18C9C5DD0072AD6B /* Build configuration list for PBXNativeTarget "VVeboImageView" */;
 			buildPhases = (
+				9F154AC9E7DE524DA2B137F7 /* Check Pods Manifest.lock */,
 				C4BDBD8618C9C5DC0072AD6B /* Sources */,
 				C4BDBD8718C9C5DC0072AD6B /* Frameworks */,
 				C4BDBD8818C9C5DC0072AD6B /* Resources */,
+				D897BDCD76D80016635527D7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,9 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4BDBDC918C9C87B0072AD6B /* 1.gif in Resources */,
 				C4BDBDA618C9C5DD0072AD6B /* Images.xcassets in Resources */,
-				C4BDBDCB18C9CA000072AD6B /* 2.gif in Resources */,
 				C4BDBD9818C9C5DC0072AD6B /* InfoPlist.strings in Resources */,
 				C4BDBDA118C9C5DD0072AD6B /* Main.storyboard in Resources */,
 			);
@@ -267,17 +277,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F154AC9E7DE524DA2B137F7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D897BDCD76D80016635527D7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4BDBD8618C9C5DC0072AD6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C423A3F01B4E80B700664149 /* UIImage+VVebo.m in Sources */,
 				C4BDBDA418C9C5DD0072AD6B /* ViewController.m in Sources */,
 				C4BDBD9E18C9C5DC0072AD6B /* AppDelegate.m in Sources */,
 				C4BDBD9A18C9C5DC0072AD6B /* main.m in Sources */,
-				C4BDBDC618C9C6080072AD6B /* VVeboImageView.m in Sources */,
-				C4A4A68F18D8047D000D06A2 /* VVeboImageTicker.m in Sources */,
-				C4BDBDC718C9C6080072AD6B /* VVeboImage.m in Sources */,
+				C423A3F21B4E80B700664149 /* VVeboImageTicker.m in Sources */,
+				C423A3F11B4E80B700664149 /* UIImageView+VVebo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +444,7 @@
 		};
 		C4BDBDBD18C9C5DD0072AD6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97CC8B36BF8FC41A9F546B4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -414,6 +458,7 @@
 		};
 		C4BDBDBE18C9C5DD0072AD6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173CB14C85F68090738ECFE2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "VVeboImageView.h"
+#import "UIImageView+VVebo.h"
+#import "UIImage+VVebo.h"
+#import "UIImageView+WebCache.h"
 @interface ViewController ()
 
 @end
@@ -19,38 +21,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-	scrollView.contentSize = CGSizeMake(320*2, 0);
-	scrollView.pagingEnabled = YES;
-	scrollView.clipsToBounds = NO;
-	scrollView.center = CGPointMake(scrollView.center.x+35, scrollView.center.y+10);
-	[self.view addSubview:scrollView];
-
-	NSData *data = [NSData dataWithContentsOfFile:
-					[[NSBundle mainBundle] pathForResource:@"1.gif" ofType:nil]];
-	for (int i=0; i<10; i++) {
-		VVeboImageView *gif = [[VVeboImageView alloc] initWithImage:[VVeboImage gifWithData:data]];
-		gif.tag = 1;
-		gif.frame = CGRectMake(i%2*130, i/2*100+20, 122, 89);
-		[scrollView addSubview:gif];
+	for (int i=0; i<2; i++) {
+        UIImageView *gif = [[UIImageView alloc] initWithFrame:CGRectMake(49, 20+135*i, 222, 125)];
+        gif.tag = 1;
+        [gif sd_setImageWithURL:[NSURL URLWithString:@"http://ww2.sinaimg.cn/large/68639d14jw1esgkca5hlig20cc06y1l9.gif"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            if (image.isGif) {
+                [gif playGif];
+            }
+        }];
+        [self.view addSubview:gif];
+        [gif playGif];
 	}
-
-	NSData *bigData = [NSData dataWithContentsOfFile:
-					   [[NSBundle mainBundle] pathForResource:@"2.gif" ofType:nil]];
-	VVeboImageView *gif = [[VVeboImageView alloc] initWithImage:[VVeboImage gifWithData:bigData]];
-	gif.tag = 1;
-	CGRect frame = gif.frame;
-	frame.origin.x = 320;
-	gif.frame = frame;
-	[scrollView addSubview:gif];
-
-	UILabel *description = [[UILabel alloc] initWithFrame:CGRectMake(0, gif.frame.size.height-60, 320, 50)];
-	description.text = @"这是十张1.4M的gif图";
-	[scrollView addSubview:description];
-
-	UILabel *description2 = [[UILabel alloc] initWithFrame:CGRectMake(0, gif.frame.size.height-60, 320, 50)];
-	description2.text = @"这是一张23.1M的gif图";
-	[gif addSubview:description2];
 }
 
 - (void)didReceiveMemoryWarning

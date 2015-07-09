@@ -6,12 +6,11 @@
 //  Copyright (c) 2014年 Johnil. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-@class VVeboImageView;
 #define tickStep 0.03f
 @interface VVeboImageTicker : NSObject
 
 + (VVeboImageTicker *)sharedInstance;
-- (void)tickView:(VVeboImageView *)imageView;
-- (void)unTickView:(VVeboImageView *)imageView;
+- (void)tickView:(UIImageView *)imageView;
+- (void)unTickView:(UIImageView *)imageView;
 
 @end

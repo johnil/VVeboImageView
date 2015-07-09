@@ -7,7 +7,8 @@
 //
 
 #import "VVeboImageTicker.h"
-#import "VVeboImageView.h"
+#import "UIImageView+VVebo.h"
+#import "UIImage+VVebo.h"
 
 @implementation VVeboImageTicker {
 	CADisplayLink *timer;
@@ -51,7 +52,7 @@
 	}
 }
 
-- (void)tickView:(VVeboImageView *)imageView{
+- (void)tickView:(UIImageView *)imageView{
 	if ([gifsView indexOfObject:imageView]==NSNotFound) {
 		[gifsView addObject:imageView];
 	}
@@ -60,7 +61,7 @@
 	}
 }
 
-- (void)unTickView:(VVeboImageView *)imageView{
+- (void)unTickView:(UIImageView *)imageView{
 	[gifsView removeObject:imageView];
 	if (gifsView.count<=0&&timer!=nil) {
 		[self stopTimer];
